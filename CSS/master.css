@@ -1,0 +1,24 @@
+body{
+background-color:beige;
+
+}
+
+
+table{
+
+border:10px solid tomato;
+
+}
+
+
+
+input::placeholder {
+    color: gray !important;
+    opacity: 1 !important;
+}
+
+.is-invalid {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+
+}

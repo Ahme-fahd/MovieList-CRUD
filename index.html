@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./CSS/all.min.css">
+  <link rel="stylesheet" href="./CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="./CSS/master.css">
+  <link rel="shortcut icon" href="./Fav-icon/video-editing-app.png" type="image/png">
+  <title>CRUD System</title>
+</head>
+<body>
+  
+<h1 class="text-center m-5 text-success fs-1">Movies List</h1>
+
+
+
+
+<div class="form-floating mb-3 w-50 m-auto">
+  <input type="text" class="form-control" id="movieTitle" >
+  <label for="movieTitle" class="text-info">Movie Title</label>
+</div>
+<div class="form-floating w-50 m-auto">
+ 
+  <input list="myList" type="text" class="form-control" id="movieCategory"  >
+  <small id="categoryError" class="text-danger d-none">Please select a valid category from the list.</small>
+  <label for="movieCategory" class="text-info">Movie Category</label>
+
+  <div class="form-floating mt-3 ">
+   <textarea type="text" class="form-control" id="movieDescription" ></textarea>
+    <label for="movieDescription" class="text-info">Movie Description</label>
+  </div>
+
+
+
+
+<button id="addBtn" class="btn btn-danger mt-3" onclick="addMovie();">Add A Movie <i class="fa-solid fa-film"></i> </button>
+
+
+<button id="editBtn" class="btn btn-outline-secondary mb-2 d-none" onClick="editMovies();">Edit<i class="fa-solid fa-pen"></i></button> 
+
+
+<hr>
+<!-- <button class="btn btn-info mt-3 ms-5">Search</button> -->
+<!-- <div class="container">
+<div id="rowData" class="row py-5">
+<div class="col-md-2"> -->
+  <input id="searchMovie" type="text" placeholder="Search Movies..." class="my-2 form-control"  oninput="searchMovies();">
+<table class="w-100 mt-5">
+  <thead >
+    <tr>
+    <th class="text-info">Movie Title</th>
+    <th class="text-info ">Movie Category</th>
+    <th class="text-info">Movie Description</th>
+    <th class="text-info text-right">Actions</th>
+  </tr>
+    </thead>
+
+    <tbody id="moviesBody"></tbody>
+
+</table>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<datalist id="myList">
+<option value="Romantic">
+<option value="Drama">
+<option value="Biograhy">
+<option value="Sci-Fiction">
+
+
+
+
+</datalist>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  <script src="./JS/bootstrap.bundle.min.js"></script>
+  <script src="./JS/main.js"></script>
+</body>
+</html>
